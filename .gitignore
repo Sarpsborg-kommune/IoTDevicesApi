@@ -441,4 +441,6 @@ $RECYCLE.BIN/
 !.vscode/launch.json
 !.vscode/extensions.json
 
+# Local files that is unnecessary in git
 README.local
+ERROR.html

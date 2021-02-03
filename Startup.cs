@@ -14,7 +14,9 @@ using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Cosmos;
 using IoTDevicesApi.Models;
+using Azure.Identity;
 using Azure.Security.KeyVault.Secrets;
+using Azure.Core;
 
 namespace IoTDevicesApi
 {
