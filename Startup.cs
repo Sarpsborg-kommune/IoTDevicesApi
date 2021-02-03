@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Net.Http.Headers;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using Microsoft.EntityFrameworkCore;
@@ -49,6 +50,11 @@ namespace IoTDevicesApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors(policy =>
+                policy.WithOrigins("http://localhost:5000", "https://localhost:5001")
+                .AllowAnyMethod()
+                .WithHeaders(HeaderNames.ContentType));
 
             app.UseHttpsRedirection();
 
