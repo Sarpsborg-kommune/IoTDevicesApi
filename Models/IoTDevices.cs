@@ -4,6 +4,7 @@ namespace IoTDevicesApi.Models
     {
         public string id { get; set; }
         public string devEui { get; set; }
+        public string appEui { get; set; }
         public string appKey { get; set; }
         public string type { get; set; }
         public string comment { get; set; }
